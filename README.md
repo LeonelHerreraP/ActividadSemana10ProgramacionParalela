@@ -1,4 +1,3 @@
-```markdown
 # WordCount con Hadoop MapReduce y Python Streaming
 
 Este proyecto implementa un conteo de palabras (**WordCount**) utilizando **Hadoop MapReduce** y scripts en **Python**, ejecutado dentro de un clúster Hadoop montado con Docker y Docker Compose.
@@ -6,18 +5,17 @@ Este proyecto implementa un conteo de palabras (**WordCount**) utilizando **Hado
 ---
 
 ## 📁 Estructura del proyecto
-```
 
+```
 HADOOPCLUSTER/
 ├── scripts/
-│ ├── example.txt # Archivo de entrada con texto
-│ ├── mapper.py # Script Python para la fase Map
-│ └── reducer.py # Script Python para la fase Reduce
-├── Dockerfile.namenode # Dockerfile que instala Python en el Namenode
-├── docker-compose.yml # Define todos los servicios del clúster Hadoop
-└── README.md # Esta guía
-
-````
+│   ├── example.txt         # Archivo de entrada con texto
+│   ├── mapper.py           # Script Python para la fase Map
+│   └── reducer.py          # Script Python para la fase Reduce
+├── Dockerfile.namenode     # Dockerfile que instala Python en el Namenode
+├── docker-compose.yml      # Define todos los servicios del clúster Hadoop
+└── README.md               # Esta guía
+```
 
 ---
 
@@ -35,9 +33,9 @@ HADOOPCLUSTER/
 
 ```bash
 docker-compose up -d --build
-````
+```
 
-> Espera unos segundos para que los contenedores namenode y datanode estén activos.
+> Espera unos segundos para que los contenedores `namenode` y `datanode` estén activos.
 
 ---
 
@@ -56,7 +54,11 @@ hdfs namenode -format
 start-dfs.sh
 ```
 
-> Si los daemon no arrancan, reinicia los contenedores o ejecuta `hadoop-daemon.sh start datanode`.
+> Si los daemon no arrancan, reinicia los contenedores o ejecuta:
+
+```bash
+hadoop-daemon.sh start datanode
+```
 
 ---
 
